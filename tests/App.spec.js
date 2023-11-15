@@ -13,8 +13,8 @@ test("Successful authorization", async ({ page }) => {
 test("Unsuccessful authorization", async ({ page }) => {
 
   await page.goto("https://netology.ru/?modal=sign_in");
-  await page.fill("input[type=password]", "1234567890");
-  await page.fill("input[type=email]", "notexist@user.io");
+  await page.fill("input[type=password]", "dsfgsg");
+  await page.fill("input[type=email]", "sebd@sdfs.com");
   await page.click("button[data-testid='login-submit-btn']")
   await expect(page.locator("div[data-testid='login-error-hint']")).toHaveText("Вы ввели неправильно логин или пароль");
 });
